@@ -4,3 +4,31 @@
 
 
 /* npx tailwindcss -i ./assets/css/input.css -o ./assets/css/output.css --watch */
+
+.raleway-font {
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  /* font-weight: 400; */
+  font-style: normal;
+}
+
+.banner{
+  background-image: url('../images/banner_bg.png');
+  background-repeat: no-repeat;
+  background-position: right, bottom;
+}
+
+@media screen and (max-width: 1024px) {
+  .banner{
+    background-image: url('../images/mobile_banner_bg.svg');
+    background-repeat: no-repeat;
+    background-position: right, bottom;
+    background-size: contain;
+  }
+}
+@media screen and (max-width: 640px) {
+  .banner{
+    background-position: right top;
+    background-size: auto;
+  }
+}

@@ -5,14 +5,107 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>DigiCrafts</title>
-	<!-- <link rel="stylesheet" href="./assets/css/input.css"> -->
-	<link rel="stylesheet" href="./assets/css/output.css">
+	<!-- Stylesheet -->
+	<!-- <link rel="stylesheet" href="./assets/css/output.css"> -->
+	<link rel="stylesheet" href="assets/css/input.css">
+	<script src="https://cdn.tailwindcss.com"></script>
+	<!-- Google Font -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
 </head>
 
-<body>
-	<div class="">
-		<h1 class="text-red-500 text-3xl">Hello</h1>
+<body class="raleway-font text-[#111227]">
+	<div class="bg-[#F7F8FB] banner h-[768px] 2xl:h-[1080px] flex flex-col">
+		<nav class="flex items-center justify-between py-5 2xl:pt-[47px] 2xl:pl-[170px] 2xl:pr-[54px] px-10">
+			<div class="cursor-pointer w-20 2xl:w-auto">
+				<img src="assets/images/logo.svg" alt="">
+			</div>
+			<ul class="hidden lg:flex items-center gap-5 2xl:gap-[64px] text-lg 2xl:text-[24px] font-semibold">
+				<li class="hover:text-[#FCB623]"><a href="#">Home</a></li>
+				<li class="hover:text-[#FCB623]"><a href="#">About</a></li>
+				<li class="hover:text-[#FCB623]"><a href="#">Portfolio</a></li>
+				<li class="hover:text-[#FCB623]"><a href="#">Team</a></li>
+				<li
+					class="px-5 2xl:px-[50px] py-2 2xl:py-[21px] bg-[#FCB623] rounded-full font-semibold text-lg 2xl:text-[24px]">
+					<a href="#">Contact</a>
+				</li>
+			</ul>
+			<div class="flex items-center gap-8 2xl:gap-[77px]">
+				<div class="hidden lg:flex items-center gap-4 2xl:gap-6">
+					<a href="#"><img class="w-10 2xl:w-auto" src="assets/images/facebook.svg" alt=""></a>
+					<a href="#"><img class="w-10 2xl:w-auto" src="assets/images/instagram.svg" alt=""></a>
+					<a href="#"><img class="w-10 2xl:w-auto" src="assets/images/x.svg" alt=""></a>
+				</div>
+				<div class="lg:hidden">
+					<div onclick="handleMenubar()" class="cursor-pointer">
+						<img class="w-10 2xl:w-auto" src="assets/images/hamburg.svg" alt="">
+					</div>
+				</div>
+			</div>
+		</nav>
+		<div class="px-10 2xl:pl-[170px] flex items-center flex-grow">
+			<div>
+				<p class="font-light text-lg">Innovation - Expertise - Collaboration</p>
+				<h1 class="font-extrabold text-[45px] lg:text-[64px] mt-4">Crafting Your <br class="lg:hidden"> Digital
+					Identity <br> <span class="text-[37px] lg:text-[64px] font-normal">Simple & Easy</span></h1>
+
+				<button
+					class="px-8 py-3 lg:px-[50px] lg:py-[21px] bg-[#FCB623] rounded-full mt-[30px] font-semibold text-[17px] lg:text-[24px]">Our
+					Work</button>
+			</div>
+		</div>
+		<div id="mobile_menubar" class="hidden w-[80vw] absolute right-0 pl-[50px] pt-[44px] pr-[30px] bg-cyan-100 h-screen">
+			<div onclick="handleClose()" class="mb-[44px] flex justify-end"><img src="assets/images/close.svg" alt=""></div>
+			<ul class="flex flex-col gap-[47px] text-[24px] font-semibold">
+				<li class="hover:text-[#FCB623]"><a href="#">Home</a></li>
+				<li class="hover:text-[#FCB623]"><a href="#">About</a></li>
+				<li class="hover:text-[#FCB623]"><a href="#">Portfolio</a></li>
+				<li class="hover:text-[#FCB623]"><a href="#">Team</a></li>
+				<li
+					class="px-[50px] py-[21px] border border-[#FCB623] text-[#FCB623] rounded-full font-semibold text-[24px] w-fit">
+					<a href="#">Contact</a>
+				</li>
+			</ul>
+			<div class="flex items-center gap-6 mt-[144px]">
+				<a href="#"><img class="w-10 2xl:w-auto" src="assets/images/facebook.svg" alt=""></a>
+				<a href="#"><img class="w-10 2xl:w-auto" src="assets/images/instagram.svg" alt=""></a>
+				<a href="#"><img class="w-10 2xl:w-auto" src="assets/images/x.svg" alt=""></a>
+			</div>
+			<p class="text-gray-30 mt-6">© 2024 DigiCrafts. All rights reserved</p>
+		</div>
 	</div>
+	<div class="h-20 w-full bg-red-500">
+
+	</div>
+
+
+
+
+
+
+
+
+	<script>
+		function handleMenubar () {
+			const menubar = document.getElementById('mobile_menubar');
+			if(menubar.classList.contains('hidden')) {
+				menubar.classList.remove('hidden');
+			}
+			else {
+				menubar.classList.add('hidden')
+			}
+		}
+		function handleClose () {
+			const menubar = document.getElementById('mobile_menubar');
+			if(menubar.classList.contains('hidden')) {
+				menubar.classList.remove('hidden');
+			}
+			else {
+				menubar.classList.add('hidden')
+			}
+		}
+	</script>
 </body>
 
 </html>
