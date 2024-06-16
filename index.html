@@ -16,7 +16,8 @@
 </head>
 
 <body class="raleway-font text-[#111227]">
-	<div class="bg-[#F7F8FB] banner h-[768px] 2xl:h-[1080px] flex flex-col">
+	<!-- Banner -->
+	<div class="md:bg-[#F7F8FB] banner h-fit md:h-[768px] 2xl:h-[1080px] flex flex-col">
 		<nav class="flex items-center justify-between py-5 2xl:pt-[47px] 2xl:pl-[170px] 2xl:pr-[54px] px-10">
 			<div class="cursor-pointer w-20 2xl:w-auto">
 				<img src="assets/images/logo.svg" alt="">
@@ -39,7 +40,7 @@
 				</div>
 				<div class="lg:hidden">
 					<div onclick="handleMenubar()" class="cursor-pointer">
-						<img class="w-10 2xl:w-auto" src="assets/images/hamburg.svg" alt="">
+						<img class="w-8 sm:w-10 2xl:w-auto" src="assets/images/hamburg.svg" alt="">
 					</div>
 				</div>
 			</div>
@@ -55,28 +56,110 @@
 					Work</button>
 			</div>
 		</div>
-		<div id="mobile_menubar" class="hidden w-[80vw] absolute right-0 pl-[50px] pt-[44px] pr-[30px] bg-cyan-100 h-screen">
-			<div onclick="handleClose()" class="mb-[44px] flex justify-end"><img src="assets/images/close.svg" alt=""></div>
-			<ul class="flex flex-col gap-[47px] text-[24px] font-semibold">
-				<li class="hover:text-[#FCB623]"><a href="#">Home</a></li>
-				<li class="hover:text-[#FCB623]"><a href="#">About</a></li>
-				<li class="hover:text-[#FCB623]"><a href="#">Portfolio</a></li>
-				<li class="hover:text-[#FCB623]"><a href="#">Team</a></li>
-				<li
-					class="px-[50px] py-[21px] border border-[#FCB623] text-[#FCB623] rounded-full font-semibold text-[24px] w-fit">
-					<a href="#">Contact</a>
-				</li>
-			</ul>
-			<div class="flex items-center gap-6 mt-[144px]">
-				<a href="#"><img class="w-10 2xl:w-auto" src="assets/images/facebook.svg" alt=""></a>
-				<a href="#"><img class="w-10 2xl:w-auto" src="assets/images/instagram.svg" alt=""></a>
-				<a href="#"><img class="w-10 2xl:w-auto" src="assets/images/x.svg" alt=""></a>
+		<!-- Mobile menubar -->
+		<div id="mobile_menubar" class="flex fixed justify-end bg-black/40 h-screen w-0 duration-300 overflow-hidden">
+			<div class="w-[80vw] lg:w-full max-w-[787px] pl-[50px] pt-[44px] pr-[30px] bg-white">
+				<div onclick="handleClose()" class="mb-[44px] flex justify-end"><img src="assets/images/close.svg"
+						alt=""></div>
+				<ul class="flex flex-col gap-[47px] text-[24px] font-semibold">
+					<li class="hover:text-[#FCB623]"><a href="#">Home</a></li>
+					<li class="hover:text-[#FCB623]"><a href="#">About</a></li>
+					<li class="hover:text-[#FCB623]"><a href="#">Portfolio</a></li>
+					<li class="hover:text-[#FCB623]"><a href="#">Team</a></li>
+					<li
+						class="px-[50px] py-[21px] border border-[#FCB623] text-[#FCB623] rounded-full font-semibold text-[24px] w-fit">
+						<a href="#">Contact</a>
+					</li>
+				</ul>
+				<div class="flex items-center gap-6 mt-[144px]">
+					<a href="#"><img class="w-10 2xl:w-auto" src="assets/images/facebook.svg" alt=""></a>
+					<a href="#"><img class="w-10 2xl:w-auto" src="assets/images/instagram.svg" alt=""></a>
+					<a href="#"><img class="w-10 2xl:w-auto" src="assets/images/x.svg" alt=""></a>
+				</div>
+				<p class="text-gray-30 mt-6">© 2024 DigiCrafts. All rights reserved</p>
 			</div>
-			<p class="text-gray-30 mt-6">© 2024 DigiCrafts. All rights reserved</p>
+		</div>
+		<!-- End Mobile menubar -->
+	</div>
+	<!-- End Banner section -->
+
+	<!-- Mobile Plant -->
+	<div class="mt-20 md:hidden">
+		<img src="assets/images/mobile_plang.png" alt="">
+	</div>
+
+
+
+	<!-- Innovators Section -->
+	<div class="mt-20 md:mt-[174px] w-full text-[#111227] px-10 2xl:px-[170px]">
+		<div class="mx-auto text-center">
+			<h1 class="font-extrabold text-[45px] lg:text-[64px] mb-6">We're Digital Solutions Innovators</h1>
+			<p class="max-w-[758px] mx-auto text-lg lg:text-[24px]">We are the architects of digital transformation,
+				crafting innovative solutions to reshape your brand.</p>
+		</div>
+		<div class="mt-[92px] flex flex-wrap xl:flex-nowrap items-center justify-center xl:justify-between gap-8">
+			<div
+				class="w-[380px] sm:w-[505px] h-[304px] sm:h-[405px] flex flex-col items-center justify-center border border-[#111227]/15 rounded-2xl">
+				<div>
+					<img src="assets/images/light.svg" alt="">
+				</div>
+				<p class="mt-[79px] max-w-[277px] text-center text-[24px]">We have some creative ideas for you</p>
+			</div>
+			<div
+				class="w-[380px] sm:w-[505px] h-[304px] sm:h-[405px] flex flex-col items-center justify-center border border-[#111227]/15 rounded-2xl">
+				<div>
+					<img src="assets/images/business.svg" alt="">
+				</div>
+				<p class="mt-[79px] max-w-[277px] text-center text-[24px]">You business is our top priority</p>
+			</div>
+			<div
+				class="w-[380px] sm:w-[505px] h-[304px] sm:h-[405px] flex flex-col items-center justify-center border border-[#111227]/15 rounded-2xl">
+				<div>
+					<img src="assets/images/customers.svg" alt="">
+				</div>
+				<p class="mt-[79px] max-w-[277px] text-center text-[24px]">We love our valuable customers</p>
+			</div>
 		</div>
 	</div>
-	<div class="h-20 w-full bg-red-500">
 
+
+	<!-- Stats Section -->
+	<div class="text-[#111227] flex flex-col items-end justify-end mt-[186px]  px-10 2xl:px-[170px]">
+		<div class="flex items-center">
+			<div>
+				<p class="mb-4 text-lg lg:text-[24px]">Let us show you some stats</p>
+				<h1 class="font-extrabold text-[45px] lg:text-[64px] mb-6 max-w-[964px]">We have done great stuff over
+					the past few years.</h1>
+				<p class="max-w-[758px] text-lg lg:text-[24px]">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+					sed do eiusmod tempor incididunt ut aliqua</p>
+			</div>
+			<div>
+				<img src="assets/images/plant.png" alt="">
+			</div>
+		</div>
+		<div class="flex items-center gap-[114px] mt-[71px]">
+			<div class="flex items-center gap-[70px]">
+				<img src="assets/images/happy_client.svg" alt="">
+				<div>
+					<h1 class="font-extrabold text-[45px] lg:text-[64px] max-w-[964px]">500+</h1>
+					<p class="max-w-[758px] text-lg lg:text-[24px]">Happy Clients</p>
+				</div>
+			</div>
+			<div class="flex items-center gap-[70px]">
+				<img src="assets/images/ongoing_support.svg" alt="">
+				<div>
+					<h1 class="font-extrabold text-[45px] lg:text-[64px] max-w-[964px]">10+</h1>
+					<p class="max-w-[758px] text-lg lg:text-[24px]">Ongoing Support</p>
+				</div>
+			</div>
+			<div class="flex items-center gap-[70px]">
+				<img src="assets/images/project_completed.svg" alt="">
+				<div>
+					<h1 class="font-extrabold text-[45px] lg:text-[64px] max-w-[964px]">200+</h1>
+					<p class="max-w-[758px] text-lg lg:text-[24px]">Project Completed</p>
+				</div>
+			</div>
+		</div>
 	</div>
 
 
@@ -87,23 +170,21 @@
 
 
 	<script>
-		function handleMenubar () {
+		function handleMenubar() {
 			const menubar = document.getElementById('mobile_menubar');
-			if(menubar.classList.contains('hidden')) {
-				menubar.classList.remove('hidden');
+			if (menubar.classList.contains('w-0')) {
+				menubar.classList.remove('w-0');
+				menubar.classList.add('w-full');
 			}
 			else {
-				menubar.classList.add('hidden')
+				menubar.classList.remove('w-full')
+				menubar.classList.add('w-0')
 			}
 		}
-		function handleClose () {
+		function handleClose() {
 			const menubar = document.getElementById('mobile_menubar');
-			if(menubar.classList.contains('hidden')) {
-				menubar.classList.remove('hidden');
-			}
-			else {
-				menubar.classList.add('hidden')
-			}
+			menubar.classList.remove('w-full');
+			menubar.classList.add('w-0')
 		}
 	</script>
 </body>
