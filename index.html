@@ -9,6 +9,10 @@
 	<!-- <link rel="stylesheet" href="./assets/css/output.css"> -->
 	<link rel="stylesheet" href="assets/css/input.css">
 	<script src="https://cdn.tailwindcss.com"></script>
+	<!-- Swiper Slide -->
+	<!-- Link Swiper's CSS -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+	<link rel="stylesheet" href="assets/carousel/carousel.css">
 	<!-- Google Font -->
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -124,20 +128,21 @@
 
 
 	<!-- Stats Section -->
-	<div class="text-[#111227] flex flex-col items-end justify-end mt-[186px]  px-10 2xl:px-[170px]">
-		<div class="flex items-center">
+	<div class="text-[#111227] flex flex-col lg:items-end lg:justify-end mt-[186px]  px-10 2xl:px-[170px]">
+		<div class="flex items-center gap-5">
 			<div>
 				<p class="mb-4 text-lg lg:text-[24px]">Let us show you some stats</p>
-				<h1 class="font-extrabold text-[45px] lg:text-[64px] mb-6 max-w-[964px]">We have done great stuff over
+				<h1 class="font-extrabold text-[32px] md:text-[45px] lg:text-[64px] mb-6 max-w-[964px]">We have done
+					great stuff over
 					the past few years.</h1>
 				<p class="max-w-[758px] text-lg lg:text-[24px]">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
 					sed do eiusmod tempor incididunt ut aliqua</p>
 			</div>
-			<div>
+			<div class="hidden md:block">
 				<img src="assets/images/plant.png" alt="">
 			</div>
 		</div>
-		<div class="flex items-center gap-[114px] mt-[71px]">
+		<div class="flex flex-col lg:flex-row lg:items-center mx-auto lg:mx-0 lg:gap-[114px] mt-[71px]">
 			<div class="flex items-center gap-[70px]">
 				<img src="assets/images/happy_client.svg" alt="">
 				<div>
@@ -163,30 +168,203 @@
 	</div>
 
 
+	<!-- Team Section -->
+
+	<div class="px-10 2xl:px-[170px] mt-[206px] w-[100vw] overflow-hidden">
+		<div>
+			<h1 class="font-extrabold text-[32px] md:text-[45px] lg:text-[64px] mb-6 max-w-[964px]">We have done great
+				stuff over
+				the past few years.</h1>
+			<p class="max-w-[912px] text-lg lg:text-[24px]">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+				sed do eiusmod tempor incididunt ut aliqua</p>
+		</div>
+
+		<!-- Slider -->
+		<div class="flex justify-start w-fit mt-[74px]">
+			<div class="swiper">
+				<div class="swiper-wrapper">
+					<!-- Card 1 -->
+					<div class="swiper-slide w-[463px] flex flex-col items-center">
+						<div class="w-[463px] h-[534px]">
+							<img class="h-full w-full" src="assets/images/team_member_image_1.png" alt="">
+						</div>
+						<div class="mt-11">
+							<div class="w-[404px] h-[74px] team_name_bg flex items-center justify-center">
+								<h1 class="text-white text-[24px] font-bold">Usman Zia</h1>
+							</div>
+							<p class="text-[24px] text-center mt-3">Senior Developer</p>
+							<div class="w-[162px] flex items-center justify-between gap-5 mx-auto mt-3">
+								<a href="#"><img src="assets/images/team_facebook.svg" alt=""></a>
+								<a href="#"><img src="assets/images/team_instagram.svg" alt=""></a>
+								<a href="#"><img src="assets/images/team_X.svg" alt=""></a>
+							</div>
+						</div>
+					</div>
+
+					<!-- Card 2 -->
+					<div class="swiper-slide w-[463px] flex flex-col items-center">
+						<div class="w-[463px] h-[534px]">
+							<img class="h-full w-full" src="assets/images/team_member_image_2.png" alt="">
+						</div>
+						<div class="mt-11">
+							<div class="w-[404px] h-[74px] team_name_bg flex items-center justify-center">
+								<h1 class="text-white text-[24px] font-bold">Alexa Strokes</h1>
+							</div>
+							<p class="text-[24px] text-center mt-3">Director</p>
+							<div class="w-[162px] flex items-center justify-between gap-5 mx-auto mt-3">
+								<a href="#"><img src="assets/images/team_facebook.svg" alt=""></a>
+								<a href="#"><img src="assets/images/team_instagram.svg" alt=""></a>
+								<a href="#"><img src="assets/images/team_X.svg" alt=""></a>
+							</div>
+						</div>
+					</div>
+
+					<!-- Card 3 -->
+					<div class="swiper-slide w-[463px] flex flex-col items-center">
+						<div class="w-[463px] h-[534px]">
+							<img class="h-full w-full" src="assets/images/team_member_image_1.png" alt="">
+						</div>
+						<div class="mt-11">
+							<div class="w-[404px] h-[74px] team_name_bg flex items-center justify-center">
+								<h1 class="text-white text-[24px] font-bold">Usman Zia</h1>
+							</div>
+							<p class="text-[24px] text-center mt-3">Senior Developer</p>
+							<div class="w-[162px] flex items-center justify-between gap-5 mx-auto mt-3">
+								<a href="#"><img src="assets/images/team_facebook.svg" alt=""></a>
+								<a href="#"><img src="assets/images/team_instagram.svg" alt=""></a>
+								<a href="#"><img src="assets/images/team_X.svg" alt=""></a>
+							</div>
+						</div>
+					</div>
+
+					<!-- Card 4 -->
+					<div class="swiper-slide w-[463px] flex flex-col items-center">
+						<div class="w-[463px] h-[534px]">
+							<img class="h-full w-full" src="assets/images/team_member_image_2.png" alt="">
+						</div>
+						<div class="mt-11">
+							<div class="w-[404px] h-[74px] team_name_bg flex items-center justify-center">
+								<h1 class="text-white text-[24px] font-bold">Alexa Strokes</h1>
+							</div>
+							<p class="text-[24px] text-center mt-3">Director</p>
+							<div class="w-[162px] flex items-center justify-between gap-5 mx-auto mt-3">
+								<a href="#"><img src="assets/images/team_facebook.svg" alt=""></a>
+								<a href="#"><img src="assets/images/team_instagram.svg" alt=""></a>
+								<a href="#"><img src="assets/images/team_X.svg" alt=""></a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="swiper-button-next"></div>
+				<div class="swiper-button-prev"></div>
+			</div>
+		</div>
+
+		<div>
+			<div class="w-fit mx-auto">
+				<h1 class="font-extrabold text-[32px] md:text-[45px] lg:text-[64px] mb-6">Our Amazing Work</h1>
+				<div class="mb-4 w-fit">
+					<ul class="flex flex-wrap -mb-px text-sm font-medium text-center" id="myTab" role="tablist">
+						<li class="mr-2">
+							<a href="#all" class="border-b-2 border-[#FCB623] text-[#FCB623] inline-block px-4 py-2 rounded-t-lg text-[24px] font-bold" id="all-tab"
+								data-tab-target="all" role="tab" aria-controls="all">All</a>
+						</li>
+						<li class="mr-2">
+							<a href="#webdesign" class="inline-block px-4 py-2 rounded-t-lg text-[24px] font-bold" id="webdesign-tab"
+								data-tab-target="webdesign" role="tab" aria-controls="webdesign">Web Design</a>
+						</li>
+						<li class="mr-2">
+							<a href="#logodesign" class="inline-block px-4 py-2 rounded-t-lg text-[24px] font-bold" id="logodesign-tab"
+								data-tab-target="logodesign" role="tab" aria-controls="logodesign">Logo Design</a>
+						</li>
+						<li class="mr-2">
+							<a href="#development" class="inline-block px-4 py-2 rounded-t-lg text-[24px] font-bold" id="development-tab"
+								data-tab-target="development" role="tab" aria-controls="development">Development</a>
+						</li>
+						<li class="mr-2">
+							<a href="#mobileapp" class="inline-block px-4 py-2 rounded-t-lg text-[24px] font-bold" id="mobileapp-tab"
+								data-tab-target="mobileapp" role="tab" aria-controls="mobileapp">Logo Design</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+			<!-- Tabs -->
+
+			<div class="container">
+				
+
+				<div id="all" class="tab-content active" role="tabpanel" aria-labelledby="all-tab">
+					<div class="p-6 bg-white rounded-lg shadow-md">All content goes here.</div>
+				</div>
+				<div id="webdesign" class="tab-content" role="tabpanel" aria-labelledby="webdesign-tab">
+					<div class="p-6 bg-white rounded-lg shadow-md">Web Design content goes here.</div>
+				</div>
+				<div id="logodesign" class="tab-content" role="tabpanel" aria-labelledby="logodesign-tab">
+					<div class="p-6 bg-white rounded-lg shadow-md">Logo Design content goes here.</div>
+				</div>
+				<div id="development" class="tab-content" role="tabpanel" aria-labelledby="development-tab">
+					<div class="p-6 bg-white rounded-lg shadow-md">Development content goes here.</div>
+				</div>
+				<div id="mobileapp" class="tab-content" role="tabpanel" aria-labelledby="mobileapp-tab">
+					<div class="p-6 bg-white rounded-lg shadow-md">Mobile App content goes here.</div>
+				</div>
+			</div>
+
+		</div>
 
 
 
 
 
 
-	<script>
-		function handleMenubar() {
-			const menubar = document.getElementById('mobile_menubar');
-			if (menubar.classList.contains('w-0')) {
-				menubar.classList.remove('w-0');
-				menubar.classList.add('w-full');
+		<!-- swiper slide -->
+		<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+		<script src="assets/carousel/carousel.js"></script>
+
+
+		<script>
+			function handleMenubar() {
+				const menubar = document.getElementById('mobile_menubar');
+				if (menubar.classList.contains('w-0')) {
+					menubar.classList.remove('w-0');
+					menubar.classList.add('w-full');
+				}
+				else {
+					menubar.classList.remove('w-full')
+					menubar.classList.add('w-0')
+				}
 			}
-			else {
-				menubar.classList.remove('w-full')
+			function handleClose() {
+				const menubar = document.getElementById('mobile_menubar');
+				menubar.classList.remove('w-full');
 				menubar.classList.add('w-0')
 			}
-		}
-		function handleClose() {
-			const menubar = document.getElementById('mobile_menubar');
-			menubar.classList.remove('w-full');
-			menubar.classList.add('w-0')
-		}
-	</script>
+
+			// Tabs Function
+			document.addEventListener("DOMContentLoaded", function () {
+				const tabs = document.querySelectorAll("[data-tab-target]");
+				const tabContents = document.querySelectorAll(".tab-content");
+
+				tabs.forEach(tab => {
+					tab.addEventListener("click", function (event) {
+						event.preventDefault();
+						const target = document.getElementById(tab.getAttribute("data-tab-target"));
+
+						tabContents.forEach(content => {
+							content.classList.remove("active");
+						});
+						tabs.forEach(t => {
+							t.classList.remove("border-[#FCB623]", "text-[#FCB623]", "border-b-2");
+							t.classList.add("border-[#FCB623]", "hover:text-[#FCB623]", "hover:border-[#FCB623]");
+						});
+
+						target.classList.add("active");
+						tab.classList.add("border-[#FCB623]", "text-[#FCB623]", "border-b-2");
+					});
+				});
+			});
+		</script>
 </body>
 
 </html>

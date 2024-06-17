@@ -18,6 +18,17 @@
   background-position: right, bottom;
 }
 
+.team_name_bg{
+  background-image: url('../images/team_name_bg.png');
+}
+
+.tab-content {
+  display: none;
+}
+.tab-content.active {
+  display: block;
+}
+
 @media screen and (max-width: 1024px) {
   .banner{
     background-image: url('../images/mobile_banner_bg.svg');
