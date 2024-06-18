@@ -15,11 +15,21 @@
 .banner{
   background-image: url('../images/banner_bg.png');
   background-repeat: no-repeat;
-  background-position: right, bottom;
+  background-position: right bottom;
 }
 
 .team_name_bg{
   background-image: url('../images/team_name_bg.png');
+}
+.client_stats_bg{
+  background-image: url('../images/client_stats_bg.png');
+  background-repeat: no-repeat;
+  background-position: left bottom;
+}
+.middle_bg{
+  background-image: url('../images/middle_bg.png');
+  background-repeat: no-repeat;
+  background-position:  bottom;
 }
 
 .tab-content {
