@@ -6,9 +6,9 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>DigiCrafts</title>
 	<!-- Stylesheet -->
-	<!-- <link rel="stylesheet" href="./assets/css/output.css"> -->
-	<link rel="stylesheet" href="assets/css/input.css">
-	<script src="https://cdn.tailwindcss.com"></script>
+	<link rel="stylesheet" href="./assets/css/output.css">
+	<!-- <link rel="stylesheet" href="assets/css/input.css"> -->
+	<!-- <script src="https://cdn.tailwindcss.com"></script> -->
 	<!-- Swiper Slide -->
 	<!-- Link Swiper's CSS -->
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
@@ -141,7 +141,7 @@
 		<!-- Stats Section -->
 		<div
 			class="text-[#111227] flex flex-col lg:items-end lg:justify-end mt-[54px] md:mt-[186px]  px-10 2xl:px-[170px]">
-			<div class="flex items-center gap-5">
+			<div class="flex items-center gap-5 bg-white p-3 rounded-lg">
 				<div>
 					<p class="mb-4 text-lg lg:text-[24px]">Let us show you some stats</p>
 					<h1 class="font-extrabold text-[32px] md:text-[45px] lg:text-[64px] mb-4 md:mb-6 max-w-[964px]">We
@@ -158,7 +158,7 @@
 				</div>
 			</div>
 			<div
-				class="flex flex-col lg:flex-row lg:items-center mx-auto lg:mx-0 gap-6 lg:gap-[114px] mt-6 md:mt-[71px]">
+				class="flex flex-col lg:flex-row lg:items-center mx-auto lg:mx-0 gap-6 lg:gap-[114px] mt-6 md:mt-[71px] bg-white p-3 rounded-lg">
 				<div class="flex items-center gap-[70px]">
 					<img src="assets/images/happy_client.svg" alt="">
 					<div>
@@ -188,28 +188,32 @@
 	<div class="middle_bg">
 		<!-- Team Section -->
 
-		<div class="px-10 2xl:px-[170px] mt-[206px]  overflow-hidden">
+		<div class="px-10 2xl:px-[170px] mt-[206px] overflow-hidden">
 			<div>
 				<h1 class="font-extrabold text-[32px] md:text-[45px] lg:text-[64px] mb-6 max-w-[964px]">We have done
 					great
-					stuff over
-					the past few years.</h1>
+					stuff over the past few years.</h1>
 				<p class="max-w-[912px] text-lg lg:text-[24px]">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-					sed do eiusmod tempor incididunt ut aliqua</p>
+					sed
+					do eiusmod tempor incididunt ut aliqu</p>
 			</div>
 
 			<!-- Slider -->
-			<div class="flex justify-start w-fit mt-[74px]">
-				<div class="swiper">
+			<div class="relative flex justify-start w-fit mt-[74px] team_carousel_container">
+				<div class="absolute top-[50%] bottom-[50%]">
+					<div class="swiper-button-prev"></div>
+				</div>
+				<div class="swiper ml-10 overflow-hidden" id="mainCarousel">
 					<div class="swiper-wrapper">
 						<!-- Card 1 -->
-						<div class="swiper-slide w-[463px] flex flex-col items-center">
-							<div class="w-[463px] h-[534px]">
+						<div class="swiper-slide w-[345px] lg:w-[463px] flex flex-col items-center" data-index="0">
+							<div class="w-[345px] lg:w-[463px] h-[399px] lg:h-[534px]">
 								<img class="h-full w-full" src="assets/images/team_member_image_1.png" alt="">
 							</div>
 							<div class="mt-11">
-								<div class="w-[404px] h-[74px] team_name_bg flex items-center justify-center">
-									<h1 class="text-white text-[24px] font-bold">Usman Zia</h1>
+								<div
+									class="w-[302px] lg:w-[404px] h-[55px] lg:h-[74px] team_name_bg flex items-center justify-center">
+									<h1 class="text-white text-lg lg:text-[24px] font-bold">Usman Zia</h1>
 								</div>
 								<p class="text-[24px] text-center mt-3">Senior Developer</p>
 								<div class="w-[162px] flex items-center justify-between gap-5 mx-auto mt-3">
@@ -221,13 +225,14 @@
 						</div>
 
 						<!-- Card 2 -->
-						<div class="swiper-slide w-[463px] flex flex-col items-center">
-							<div class="w-[463px] h-[534px]">
+						<div class="swiper-slide w-[345px] lg:w-[463px] flex flex-col items-center" data-index="1">
+							<div class="w-[345px] lg:w-[463px] h-[399px] lg:h-[534px]">
 								<img class="h-full w-full" src="assets/images/team_member_image_2.png" alt="">
 							</div>
 							<div class="mt-11">
-								<div class="w-[404px] h-[74px] team_name_bg flex items-center justify-center">
-									<h1 class="text-white text-[24px] font-bold">Alexa Strokes</h1>
+								<div
+									class="w-[302px] lg:w-[404px] h-[55px] lg:h-[74px] team_name_bg flex items-center justify-center">
+									<h1 class="text-white text-lg lg:text-[24px] font-bold">Alexa Strokes</h1>
 								</div>
 								<p class="text-[24px] text-center mt-3">Director</p>
 								<div class="w-[162px] flex items-center justify-between gap-5 mx-auto mt-3">
@@ -237,15 +242,15 @@
 								</div>
 							</div>
 						</div>
-
 						<!-- Card 3 -->
-						<div class="swiper-slide w-[463px] flex flex-col items-center">
-							<div class="w-[463px] h-[534px]">
+						<div class="swiper-slide w-[345px] lg:w-[463px] flex flex-col items-center" data-index="2">
+							<div class="w-[345px] lg:w-[463px] h-[399px] lg:h-[534px]">
 								<img class="h-full w-full" src="assets/images/team_member_image_1.png" alt="">
 							</div>
 							<div class="mt-11">
-								<div class="w-[404px] h-[74px] team_name_bg flex items-center justify-center">
-									<h1 class="text-white text-[24px] font-bold">Usman Zia</h1>
+								<div
+									class="w-[302px] lg:w-[404px] h-[55px] lg:h-[74px] team_name_bg flex items-center justify-center">
+									<h1 class="text-white text-lg lg:text-[24px] font-bold">Usman Zia</h1>
 								</div>
 								<p class="text-[24px] text-center mt-3">Senior Developer</p>
 								<div class="w-[162px] flex items-center justify-between gap-5 mx-auto mt-3">
@@ -257,13 +262,14 @@
 						</div>
 
 						<!-- Card 4 -->
-						<div class="swiper-slide w-[463px] flex flex-col items-center">
-							<div class="w-[463px] h-[534px]">
+						<div class="swiper-slide w-[345px] lg:w-[463px] flex flex-col items-center" data-index="3">
+							<div class="w-[345px] lg:w-[463px] h-[399px] lg:h-[534px]">
 								<img class="h-full w-full" src="assets/images/team_member_image_2.png" alt="">
 							</div>
 							<div class="mt-11">
-								<div class="w-[404px] h-[74px] team_name_bg flex items-center justify-center">
-									<h1 class="text-white text-[24px] font-bold">Alexa Strokes</h1>
+								<div
+									class="w-[302px] lg:w-[404px] h-[55px] lg:h-[74px] team_name_bg flex items-center justify-center">
+									<h1 class="text-white text-lg lg:text-[24px] font-bold">Alexa Strokes</h1>
 								</div>
 								<p class="text-[24px] text-center mt-3">Director</p>
 								<div class="w-[162px] flex items-center justify-between gap-5 mx-auto mt-3">
@@ -273,12 +279,180 @@
 								</div>
 							</div>
 						</div>
+						<!-- Card 5 -->
+						<div class="swiper-slide w-[345px] lg:w-[463px] flex flex-col items-center" data-index="4">
+							<div class="w-[345px] lg:w-[463px] h-[399px] lg:h-[534px]">
+								<img class="h-full w-full" src="assets/images/team_member_image_1.png" alt="">
+							</div>
+							<div class="mt-11">
+								<div
+									class="w-[302px] lg:w-[404px] h-[55px] lg:h-[74px] team_name_bg flex items-center justify-center">
+									<h1 class="text-white text-lg lg:text-[24px] font-bold">Usman Zia</h1>
+								</div>
+								<p class="text-[24px] text-center mt-3">Senior Developer</p>
+								<div class="w-[162px] flex items-center justify-between gap-5 mx-auto mt-3">
+									<a href="#"><img src="assets/images/team_facebook.svg" alt=""></a>
+									<a href="#"><img src="assets/images/team_instagram.svg" alt=""></a>
+									<a href="#"><img src="assets/images/team_X.svg" alt=""></a>
+								</div>
+							</div>
+						</div>
+
+						<!-- Card 6 -->
+						<div class="swiper-slide w-[345px] lg:w-[463px] flex flex-col items-center" data-index="5">
+							<div class="w-[345px] lg:w-[463px] h-[399px] lg:h-[534px]">
+								<img class="h-full w-full" src="assets/images/team_member_image_2.png" alt="">
+							</div>
+							<div class="mt-11">
+								<div
+									class="w-[302px] lg:w-[404px] h-[55px] lg:h-[74px] team_name_bg flex items-center justify-center">
+									<h1 class="text-white text-lg lg:text-[24px] font-bold">Alexa Strokes</h1>
+								</div>
+								<p class="text-[24px] text-center mt-3">Director</p>
+								<div class="w-[162px] flex items-center justify-between gap-5 mx-auto mt-3">
+									<a href="#"><img src="assets/images/team_facebook.svg" alt=""></a>
+									<a href="#"><img src="assets/images/team_instagram.svg" alt=""></a>
+									<a href="#"><img src="assets/images/team_X.svg" alt=""></a>
+								</div>
+							</div>
+						</div>
+
+						<!-- Add more cards as needed -->
+					</div>
+				</div>
+				<div class="absolute top-[50%] bottom-[50%] -right-10">
+					<div class="swiper-button-next"></div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Modal -->
+		<div class="modal" id="modal">
+			<div class="modal-content">
+				<span class="close z-10" id="modalClose"><img src="assets/images/close_modal.svg" alt=""></span>
+				<div class="swiper" id="modalCarousel">
+					<div class="swiper-wrapper">
+						<!-- Card 1 -->
+						<div class="swiper-slide w-[345px] lg:w-[463px] flex flex-col items-center" data-index="0">
+							<div class="w-[345px] lg:w-[463px] h-[399px] lg:h-[534px]">
+								<img class="h-full w-full" src="assets/images/team_member_image_1.png" alt="">
+							</div>
+							<div class="mt-11">
+								<div
+									class="w-[302px] lg:w-[404px] h-[55px] lg:h-[74px] team_name_bg flex items-center justify-center">
+									<h1 class="text-white text-lg lg:text-[24px] font-bold">Usman Zia</h1>
+								</div>
+								<p class="text-[24px] text-center mt-3">Senior Developer</p>
+								<div class="w-[162px] flex items-center justify-between gap-5 mx-auto mt-3">
+									<a href="#"><img src="assets/images/team_facebook.svg" alt=""></a>
+									<a href="#"><img src="assets/images/team_instagram.svg" alt=""></a>
+									<a href="#"><img src="assets/images/team_X.svg" alt=""></a>
+								</div>
+							</div>
+						</div>
+
+						<!-- Card 2 -->
+						<div class="swiper-slide w-[345px] lg:w-[463px] flex flex-col items-center" data-index="1">
+							<div class="w-[345px] lg:w-[463px] h-[399px] lg:h-[534px]">
+								<img class="h-full w-full" src="assets/images/team_member_image_2.png" alt="">
+							</div>
+							<div class="mt-11">
+								<div
+									class="w-[302px] lg:w-[404px] h-[55px] lg:h-[74px] team_name_bg flex items-center justify-center">
+									<h1 class="text-white text-lg lg:text-[24px] font-bold">Alexa Strokes</h1>
+								</div>
+								<p class="text-[24px] text-center mt-3">Director</p>
+								<div class="w-[162px] flex items-center justify-between gap-5 mx-auto mt-3">
+									<a href="#"><img src="assets/images/team_facebook.svg" alt=""></a>
+									<a href="#"><img src="assets/images/team_instagram.svg" alt=""></a>
+									<a href="#"><img src="assets/images/team_X.svg" alt=""></a>
+								</div>
+							</div>
+						</div>
+						<!-- Card 3 -->
+						<div class="swiper-slide w-[345px] lg:w-[463px] flex flex-col items-center" data-index="2">
+							<div class="w-[345px] lg:w-[463px] h-[399px] lg:h-[534px]">
+								<img class="h-full w-full" src="assets/images/team_member_image_1.png" alt="">
+							</div>
+							<div class="mt-11">
+								<div
+									class="w-[302px] lg:w-[404px] h-[55px] lg:h-[74px] team_name_bg flex items-center justify-center">
+									<h1 class="text-white text-lg lg:text-[24px] font-bold">Usman Zia</h1>
+								</div>
+								<p class="text-[24px] text-center mt-3">Senior Developer</p>
+								<div class="w-[162px] flex items-center justify-between gap-5 mx-auto mt-3">
+									<a href="#"><img src="assets/images/team_facebook.svg" alt=""></a>
+									<a href="#"><img src="assets/images/team_instagram.svg" alt=""></a>
+									<a href="#"><img src="assets/images/team_X.svg" alt=""></a>
+								</div>
+							</div>
+						</div>
+
+						<!-- Card 4 -->
+						<div class="swiper-slide w-[345px] lg:w-[463px] flex flex-col items-center" data-index="3">
+							<div class="w-[345px] lg:w-[463px] h-[399px] lg:h-[534px]">
+								<img class="h-full w-full" src="assets/images/team_member_image_2.png" alt="">
+							</div>
+							<div class="mt-11">
+								<div
+									class="w-[302px] lg:w-[404px] h-[55px] lg:h-[74px] team_name_bg flex items-center justify-center">
+									<h1 class="text-white text-lg lg:text-[24px] font-bold">Alexa Strokes</h1>
+								</div>
+								<p class="text-[24px] text-center mt-3">Director</p>
+								<div class="w-[162px] flex items-center justify-between gap-5 mx-auto mt-3">
+									<a href="#"><img src="assets/images/team_facebook.svg" alt=""></a>
+									<a href="#"><img src="assets/images/team_instagram.svg" alt=""></a>
+									<a href="#"><img src="assets/images/team_X.svg" alt=""></a>
+								</div>
+							</div>
+						</div>
+						<!-- Card 5 -->
+						<div class="swiper-slide w-[345px] lg:w-[463px] flex flex-col items-center" data-index="4">
+							<div class="w-[345px] lg:w-[463px] h-[399px] lg:h-[534px]">
+								<img class="h-full w-full" src="assets/images/team_member_image_1.png" alt="">
+							</div>
+							<div class="mt-11">
+								<div
+									class="w-[302px] lg:w-[404px] h-[55px] lg:h-[74px] team_name_bg flex items-center justify-center">
+									<h1 class="text-white text-lg lg:text-[24px] font-bold">Usman Zia</h1>
+								</div>
+								<p class="text-[24px] text-center mt-3">Senior Developer</p>
+								<div class="w-[162px] flex items-center justify-between gap-5 mx-auto mt-3">
+									<a href="#"><img src="assets/images/team_facebook.svg" alt=""></a>
+									<a href="#"><img src="assets/images/team_instagram.svg" alt=""></a>
+									<a href="#"><img src="assets/images/team_X.svg" alt=""></a>
+								</div>
+							</div>
+						</div>
+
+						<!-- Card 6 -->
+						<div class="swiper-slide w-[345px] lg:w-[463px] flex flex-col items-center" data-index="5">
+							<div class="w-[345px] lg:w-[463px] h-[399px] lg:h-[534px]">
+								<img class="h-full w-full" src="assets/images/team_member_image_2.png" alt="">
+							</div>
+							<div class="mt-11">
+								<div
+									class="w-[302px] lg:w-[404px] h-[55px] lg:h-[74px] team_name_bg flex items-center justify-center">
+									<h1 class="text-white text-lg lg:text-[24px] font-bold">Alexa Strokes</h1>
+								</div>
+								<p class="text-[24px] text-center mt-3">Director</p>
+								<div class="w-[162px] flex items-center justify-between gap-5 mx-auto mt-3">
+									<a href="#"><img src="assets/images/team_facebook.svg" alt=""></a>
+									<a href="#"><img src="assets/images/team_instagram.svg" alt=""></a>
+									<a href="#"><img src="assets/images/team_X.svg" alt=""></a>
+								</div>
+							</div>
+						</div>
+						<!-- Add more cards as needed -->
+
 					</div>
 					<div class="swiper-button-next"></div>
 					<div class="swiper-button-prev"></div>
 				</div>
 			</div>
 		</div>
+
+
 		<!-- Work Section-->
 		<div class="px-10 2xl:px-[170px] mt-[78px] md:mt-[206px]">
 			<div class="w-fit md:mx-auto">

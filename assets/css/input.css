@@ -20,6 +20,7 @@
 
 .team_name_bg{
   background-image: url('../images/team_name_bg.png');
+  background-size: cover;
 }
 .client_stats_bg{
   background-image: url('../images/client_stats_bg.png');
@@ -29,7 +30,7 @@
 .middle_bg{
   background-image: url('../images/middle_bg.png');
   background-repeat: no-repeat;
-  background-position:  bottom;
+  background-position:  center;
 }
 
 .tab-content {
