@@ -1250,6 +1250,7 @@ video {
 
 .middle_bg{
   background-image: url('../images/middle_bg.png');
+  background-size: cover;
   background-repeat: no-repeat;
   background-position:  center;
 }
