@@ -34,13 +34,13 @@
 				<img src="assets/images/logo.svg" alt="">
 			</div>
 			<ul class="hidden lg:flex items-center gap-5 2xl:gap-[64px] text-lg 2xl:text-[24px] font-semibold">
-				<li class="hover:text-[#FCB623]"><a href="#">Home</a></li>
-				<li class="hover:text-[#FCB623]"><a href="#">About</a></li>
-				<li class="hover:text-[#FCB623]"><a href="#">Portfolio</a></li>
-				<li class="hover:text-[#FCB623]"><a href="#">Team</a></li>
+				<li class="hover:text-[#FCB623]"><a href="#home">Home</a></li>
+				<li class="hover:text-[#FCB623]"><a href="#about">About</a></li>
+				<li class="hover:text-[#FCB623]"><a href="#portfolio">Portfolio</a></li>
+				<li class="hover:text-[#FCB623]"><a href="#team">Team</a></li>
 				<li
 					class="px-5 2xl:px-[50px] py-2 2xl:py-[21px] bg-[#FCB623] rounded-full font-semibold text-lg 2xl:text-[24px]">
-					<a href="#contact_us">Contact</a>
+					<a href="#contact">Contact</a>
 				</li>
 			</ul>
 			<div class="flex items-center gap-8 2xl:gap-[77px]">
@@ -73,13 +73,13 @@
 				<div onclick="handleClose()" class="mb-[44px] flex justify-end"><img src="assets/images/close.svg"
 						alt=""></div>
 				<ul class="flex flex-col gap-[47px] text-[24px] font-semibold">
-					<li class="hover:text-[#FCB623]"><a href="#">Home</a></li>
-					<li class="hover:text-[#FCB623]"><a href="#">About</a></li>
-					<li class="hover:text-[#FCB623]"><a href="#">Portfolio</a></li>
-					<li class="hover:text-[#FCB623]"><a href="#">Team</a></li>
-					<li
+					<li onclick="handleClose()" class="hover:text-[#FCB623]"><a href="#home">Home</a></li>
+					<li onclick="handleClose()" class="hover:text-[#FCB623]"><a href="#about">About</a></li>
+					<li onclick="handleClose()" class="hover:text-[#FCB623]"><a href="#portfolio">Portfolio</a></li>
+					<li onclick="handleClose()" class="hover:text-[#FCB623]"><a href="#team">Team</a></li>
+					<li onclick="handleClose()"
 						class="px-[50px] py-[21px] border border-[#FCB623] text-[#FCB623] rounded-full font-semibold text-[24px] w-fit">
-						<a href="#contact_us">Contact</a>
+						<a href="#contact">Contact</a>
 					</li>
 				</ul>
 				<div class="flex items-center gap-6 mt-[144px]">
@@ -103,7 +103,7 @@
 	<div class="client_stats_bg">
 
 		<!-- Innovators Section -->
-		<div class="mt-20 md:mt-[174px] w-full text-[#111227] px-10 2xl:px-[170px]">
+		<div class="mt-20 md:mt-[174px] w-full text-[#111227] px-10 2xl:px-[170px]" id="about">
 			<div class="mx-auto text-center">
 				<h1 class="font-extrabold text-[32px] lg:text-[64px] mb-3 md:mb-6">We're Digital Solutions Innovators
 				</h1>
@@ -192,15 +192,14 @@
 	</div>
 
 
-	<div class="middle_bg">
+	<div class="middle_bg" id="team">
 		<!-- Team Section -->
-
 		<div class="px-10 2xl:px-[170px] mt-[206px] overflow-hidden">
 			<div>
 				<h1 class="font-extrabold text-[32px] md:text-[45px] lg:text-[64px] mb-6 max-w-[964px]">We have done
 					great
 					stuff over the past few years.</h1>
-				<p class="max-w-[912px] text-lg lg:text-[24px]">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+				<p class="max-w-[912px] text-lg lg:text-[24px] mb-10">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
 					sed
 					do eiusmod tempor incididunt ut aliqu</p>
 			</div>
@@ -408,7 +407,7 @@
 
 
 		<!-- Work Section-->
-		<div class="px-10 2xl:px-[170px] mt-[78px] md:mt-[206px]">
+		<div class="px-10 2xl:px-[170px] mt-[78px] md:mt-[206px]" id="portfolio">
 			<div class="w-fit md:mx-auto">
 				<h1 class="font-extrabold text-[32px] md:text-[45px] lg:text-[64px] mb-3 md:mb-6">Our Amazing Work</h1>
 				<div class="mb-6 w-fit">
@@ -666,7 +665,7 @@
 
 
 		<!-- Get In Touch -->
-		<div id="contact_us" class="mt-[106px] px-10 2xl:px-[170px]">
+		<div id="contact" class="mt-[106px] px-10 2xl:px-[170px]">
 			<div>
 				<h1 class="font-extrabold text-[32px] md:text-[45px] lg:text-[64px] max-w-[964px]">Interested?</h1>
 				<h1 class="font-extrabold text-[32px] md:text-[45px] lg:text-[64px] mb-9 xl:mb-[106px] max-w-[964px]">
@@ -742,6 +741,15 @@
 
 
 	<script>
+		document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+			anchor.addEventListener('click', function (e) {
+				e.preventDefault();
+
+				document.querySelector(this.getAttribute('href')).scrollIntoView({
+					behavior: 'smooth'
+				});
+			});
+		});
 		function handleMenubar() {
 			const menubar = document.getElementById('mobile_menubar');
 			if (menubar.classList.contains('w-0')) {
