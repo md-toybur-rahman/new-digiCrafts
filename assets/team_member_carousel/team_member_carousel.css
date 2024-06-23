@@ -165,7 +165,7 @@ body {
     margin: auto;
     padding: 0;
     width: 90%;
-    max-width: 1200px;
+    max-width: 800px;
 }
 
 .close {
@@ -185,7 +185,7 @@ body {
 
 /* Modal Carousel Styles */
 .modal_wrapper {
-    max-width: 1100px;
+    max-width: 600px;
     width: 100%;
     position: relative;
     margin: auto;
@@ -220,7 +220,7 @@ body {
 .modal_wrapper .modal_carousel {
     display: grid;
     grid-auto-flow: column;
-    grid-auto-columns: 100%; /* Adjusted to 100% to ensure single card view */
+	grid-auto-columns: calc((100% / 1) - 100px);
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     gap: 16px;
