@@ -199,7 +199,8 @@
 				<h1 class="font-extrabold text-[32px] md:text-[45px] lg:text-[64px] mb-6 max-w-[964px]">We have done
 					great
 					stuff over the past few years.</h1>
-				<p class="max-w-[912px] text-lg lg:text-[24px] mb-10">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+				<p class="max-w-[912px] text-lg lg:text-[24px] mb-10">Lorem ipsum dolor sit amet, consectetur adipiscing
+					elit,
 					sed
 					do eiusmod tempor incididunt ut aliqu</p>
 			</div>
@@ -668,28 +669,28 @@
 		<div id="contact" class="mt-[106px] px-10 2xl:px-[170px]">
 			<div>
 				<h1 class="font-extrabold text-[32px] md:text-[45px] lg:text-[64px] max-w-[964px]">Interested?</h1>
-				<h1 class="font-extrabold text-[32px] md:text-[45px] lg:text-[64px] mb-9 xl:mb-[106px] max-w-[964px]">
+				<h1 class="font-extrabold text-[32px] md:text-[45px] lg:text-[64px] mb-9 max-w-[964px]">
 					Let's Get In Touch
 				</h1>
 			</div>
 			<div class="xl:grid  xl:grid-cols-8 gap-[38px]">
-				<form class="col-span-5">
+				<form class="col-span-5" id="myForm">
 					<div class="md:grid md:grid-cols-5 gap-9 md:text-[20px]">
 						<div class="col-span-2 flex flex-col gap-6">
-							<input class="border border-[#111227]/15% rounded-lg p-4 md:p-6" type="text"
+							<input id="name" class="border border-[#111227]/15% rounded-lg p-4 md:p-6" type="text"
 								placeholder="Your Name">
-							<input class="border border-[#111227]/15% rounded-lg p-4 md:p-6" type="email"
-								placeholder="Email Address">
-							<input class="border border-[#111227]/15% rounded-lg p-4 md:p-6" type="text"
-								placeholder="Subject">
+							<input id="email" class="border border-[#111227]/15% rounded-lg p-4 md:p-6" type="email"
+								placeholder="Email Address" oninput="validateEmail()">
+							<input id="phone" class="border border-[#111227]/15% rounded-lg p-4 md:p-6" type="text"
+								placeholder="Phone">
 						</div>
 						<div class="col-span-3 mt-6 md:mt-0">
 							<textarea class="border border-[#111227]/15% rounded-lg p-6 w-full h-[222px] md:h-full"
-								name="message" id="" placeholder="Your Message"></textarea>
+								name="message" id="message" placeholder="Your Message"></textarea>
 						</div>
 					</div>
-					<button type="submit"
-						class="px-8 py-3 lg:px-[50px] lg:py-[21px] bg-[#FCB623] rounded-full mt-[50px] 2xl:mt-[78px] font-semibold text-[17px] lg:text-[24px] w-full">Send
+					<button type="submit" id="submitButton" class="px-8 py-3 lg:px-[50px] lg:py-[21px] bg-[#FCB623] rounded-full mt-[50px] 2xl:mt-[78px] font-semibold text-[17px] lg:text-[24px] w-full
+						disabled:opacity-50 disabled:cursor-not-allowed disabled:bg-gray-400 disabled:text-gray-700" disabled>Send
 						Message</button>
 				</form>
 				<div class="md:ml-7 col-span-3 mt-10 bg-white h-fit w-fit p-10 rounded-xl">
@@ -750,6 +751,17 @@
 				});
 			});
 		});
+		function validateEmail() {
+			const emailInput = document.getElementById('email');
+			const submitButton = document.getElementById('submitButton');
+
+			// Check if the email contains '@' symbol
+			if (emailInput.value.includes('@')) {
+				submitButton.removeAttribute('disabled'); // Enable the submit button
+			} else {
+				submitButton.setAttribute('disabled', 'disabled'); // Disable the submit button
+			}
+		}
 		function handleMenubar() {
 			const menubar = document.getElementById('mobile_menubar');
 			if (menubar.classList.contains('w-0')) {
