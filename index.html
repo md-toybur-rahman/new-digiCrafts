@@ -8,10 +8,12 @@
 	<!-- Stylesheet -->
 	<link rel="stylesheet" href="./assets/css/output.css">
 	<!-- <link rel="stylesheet" href="assets/css/input.css"> -->
-	<!-- <script src="https://cdn.tailwindcss.com"></script> -->
+	<script src="https://cdn.tailwindcss.com"></script>
 	<!-- Swiper Slide -->
 	<!-- Link Swiper's CSS -->
+	<!-- Link Swiper's CSS -->
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
 	<link rel="stylesheet" href="assets/team_member_carousel/team_modal.css">
 	<link rel="stylesheet" href="assets/carousel/carousel.css">
 	<!-- Google Font -->
@@ -48,6 +50,16 @@
 					<a href="#"><img class="w-10 2xl:w-auto" src="assets/images/facebook.svg" alt=""></a>
 					<a href="#"><img class="w-10 2xl:w-auto" src="assets/images/instagram.svg" alt=""></a>
 					<a href="#"><img class="w-10 2xl:w-auto" src="assets/images/x.svg" alt=""></a>
+					<div class="w-[115px]">
+						<div onclick="changeLanguage('ENG')" id="ENG" class="flex items-center gap-3 cursor-pointer">
+							<img class="w-[50px] h-[50px]" src="assets/images/united-states.png" alt="">
+							<p class="text-[#11127] text-lg md:text-xl font-semibold">ENG</p>
+						</div>
+						<div onclick="changeLanguage('CZE')" id="CZE" class="items-center gap-3 hidden cursor-pointer">
+							<img class="w-[50px] h-[50px]" src="assets/images/czech-republic.png" alt="">
+							<p class="text-[#11127] text-lg md:text-xl font-semibold">CZE</p>
+						</div>
+					</div>
 				</div>
 				<div class="lg:hidden">
 					<div onclick="handleMenubar()" class="cursor-pointer">
@@ -78,8 +90,20 @@
 					<li onclick="handleClose()" class="hover:text-[#FCB623]"><a href="#portfolio">Portfolio</a></li>
 					<li onclick="handleClose()" class="hover:text-[#FCB623]"><a href="#team">Team</a></li>
 					<li onclick="handleClose()"
-						class="px-[50px] py-[21px] border border-[#FCB623] text-[#FCB623] rounded-full font-semibold text-[24px] w-fit">
+						class="px-[50px] py-[21px] border border-[#FCB623] text-[#FCB623] rounded-full font-semibold text-[24px] w-[189px]">
 						<a href="#contact">Contact</a>
+					</li>
+					<li class="w-[115px]">
+						<div onclick="changeLanguage('ENG')" id="mobile_ENG"
+							class="flex items-center gap-3 cursor-pointer">
+							<img class="w-[50px] h-[50px]" src="assets/images/united-states.png" alt="">
+							<p class="text-[#11127] text-lg md:text-xl font-semibold">ENG</p>
+						</div>
+						<div onclick="changeLanguage('CZE')" id="mobile_CZE"
+							class="items-center gap-3 hidden cursor-pointer">
+							<img class="w-[50px] h-[50px]" src="assets/images/czech-republic.png" alt="">
+							<p class="text-[#11127] text-lg md:text-xl font-semibold">CZE</p>
+						</div>
 					</li>
 				</ul>
 				<div class="flex items-center gap-6 mt-[144px]">
@@ -194,6 +218,7 @@
 
 	<div class="middle_bg" id="team">
 		<!-- Team Section -->
+		<!-- Updated carousel and modal -->
 		<div class="px-10 2xl:px-[170px] mt-[206px] overflow-hidden">
 			<div>
 				<h1 class="font-extrabold text-[32px] md:text-[45px] lg:text-[64px] mb-6 max-w-[964px]">We have done
@@ -205,14 +230,14 @@
 					do eiusmod tempor incididunt ut aliqu</p>
 			</div>
 
-			<div class="md:px-10 bg-white w-fit rounded-xl">
+			<div class="md:px-10 bg-white w-full md:w-fit rounded-xl">
 				<div class="wrapper mt-[74px]">
 					<i id="left" class=""><img src="assets/images/left_slide.svg" alt=""></i>
 					<ul class="carousel" id="mainCarousel">
-						<li class="card" data-index="0" onclick="openModal(0)">
+						<li class="card" data-index="0">
 							<div>
-								<div class="img"><img src="assets/images/team_member_image_1.png" alt="img"
-										draggable="false"></div>
+								<div onclick="openModal(0)" class="img"><img src="assets/images/team_member_image_1.png"
+										alt="img" draggable="false"></div>
 								<div class="mt-11">
 									<div
 										class="w-full h-[55px] lg:h-[74px] team_name_bg flex items-center justify-center">
@@ -220,17 +245,20 @@
 									</div>
 									<p class="text-[24px] text-center mt-3">Senior Developer</p>
 									<div class="w-[162px] flex items-center justify-between gap-5 mx-auto mt-3">
-										<a href="#"><img src="assets/images/team_facebook.svg" alt=""></a>
-										<a href="#"><img src="assets/images/team_instagram.svg" alt=""></a>
-										<a href="#"><img src="assets/images/team_X.svg" alt=""></a>
+										<a onclick="scrollToTop()" href="#"><img src="assets/images/team_facebook.svg"
+												alt=""></a>
+										<a onclick="scrollToTop()" href="#"><img src="assets/images/team_instagram.svg"
+												alt=""></a>
+										<a onclick="scrollToTop()" href="#"><img src="assets/images/team_X.svg"
+												alt=""></a>
 									</div>
 								</div>
 							</div>
 						</li>
-						<li class="card" data-index="1" onclick="openModal(1)">
+						<li class="card" data-index="1">
 							<div>
-								<div class="img"><img src="assets/images/team_member_image_2.png" alt="img"
-										draggable="false"></div>
+								<div onclick="openModal(1)" class="img"><img src="assets/images/team_member_image_2.png"
+										alt="img" draggable="false"></div>
 								<div class="mt-11">
 									<div
 										class="w-full h-[55px] lg:h-[74px] team_name_bg flex items-center justify-center">
@@ -238,17 +266,20 @@
 									</div>
 									<p class="text-[24px] text-center mt-3">Senior Developer</p>
 									<div class="w-[162px] flex items-center justify-between gap-5 mx-auto mt-3">
-										<a href="#"><img src="assets/images/team_facebook.svg" alt=""></a>
-										<a href="#"><img src="assets/images/team_instagram.svg" alt=""></a>
-										<a href="#"><img src="assets/images/team_X.svg" alt=""></a>
+										<a onclick="scrollToTop()" href="#"><img src="assets/images/team_facebook.svg"
+												alt=""></a>
+										<a onclick="scrollToTop()" href="#"><img src="assets/images/team_instagram.svg"
+												alt=""></a>
+										<a onclick="scrollToTop()" href="#"><img src="assets/images/team_X.svg"
+												alt=""></a>
 									</div>
 								</div>
 							</div>
 						</li>
-						<li class="card" data-index="2" onclick="openModal(2)">
+						<li class="card" data-index="2">
 							<div>
-								<div class="img"><img src="assets/images/team_member_image_1.png" alt="img"
-										draggable="false"></div>
+								<div onclick="openModal(2)" class="img"><img src="assets/images/team_member_image_1.png"
+										alt="img" draggable="false"></div>
 								<div class="mt-11">
 									<div
 										class="w-full h-[55px] lg:h-[74px] team_name_bg flex items-center justify-center">
@@ -256,17 +287,20 @@
 									</div>
 									<p class="text-[24px] text-center mt-3">Senior Developer</p>
 									<div class="w-[162px] flex items-center justify-between gap-5 mx-auto mt-3">
-										<a href="#"><img src="assets/images/team_facebook.svg" alt=""></a>
-										<a href="#"><img src="assets/images/team_instagram.svg" alt=""></a>
-										<a href="#"><img src="assets/images/team_X.svg" alt=""></a>
+										<a onclick="scrollToTop()" href="#"><img src="assets/images/team_facebook.svg"
+												alt=""></a>
+										<a onclick="scrollToTop()" href="#"><img src="assets/images/team_instagram.svg"
+												alt=""></a>
+										<a onclick="scrollToTop()" href="#"><img src="assets/images/team_X.svg"
+												alt=""></a>
 									</div>
 								</div>
 							</div>
 						</li>
-						<li class="card" data-index="3" onclick="openModal(3)">
+						<li class="card" data-index="3">
 							<div>
-								<div class="img"><img src="assets/images/team_member_image_2.png" alt="img"
-										draggable="false"></div>
+								<div onclick="openModal(3)" class="img"><img src="assets/images/team_member_image_2.png"
+										alt="img" draggable="false"></div>
 								<div class="mt-11">
 									<div
 										class="w-full h-[55px] lg:h-[74px] team_name_bg flex items-center justify-center">
@@ -274,9 +308,12 @@
 									</div>
 									<p class="text-[24px] text-center mt-3">Senior Developer</p>
 									<div class="w-[162px] flex items-center justify-between gap-5 mx-auto mt-3">
-										<a href="#"><img src="assets/images/team_facebook.svg" alt=""></a>
-										<a href="#"><img src="assets/images/team_instagram.svg" alt=""></a>
-										<a href="#"><img src="assets/images/team_X.svg" alt=""></a>
+										<a onclick="scrollToTop()" href="#"><img src="assets/images/team_facebook.svg"
+												alt=""></a>
+										<a onclick="scrollToTop()" href="#"><img src="assets/images/team_instagram.svg"
+												alt=""></a>
+										<a onclick="scrollToTop()" href="#"><img src="assets/images/team_X.svg"
+												alt=""></a>
 									</div>
 								</div>
 							</div>
@@ -288,129 +325,119 @@
 
 			<!-- Modal -->
 			<div id="carouselModal" class="modal">
-				<div class="modal-content">
-					<span class="close" onclick="closeModal()">&times;</span>
-					<div class="modal_wrapper">
-						<i id="modal_left" class=""><img src="assets/images/left_slide.svg" alt=""></i>
-						<ul class="modal_carousel" id="modalCarousel">
-							<li class="modal_card" data-index="0" onclick="openModal(0)">
-								<div>
-									<div class="img"><img src="assets/images/team_member_image_1.png" alt="img"
-											draggable="false"></div>
-									<div class="mt-11">
-										<div
-											class="w-full h-[55px] lg:h-[74px] team_name_bg flex items-center justify-center">
-											<h1 class="text-white text-lg lg:text-[24px] font-bold">Usman Zia</h1>
-										</div>
-										<p class="text-[24px] text-center mt-3">Senior Developer</p>
-										<div class="w-[162px] flex items-center justify-between gap-5 mx-auto mt-3">
-											<a href="#"><img src="assets/images/team_facebook.svg" alt=""></a>
-											<a href="#"><img src="assets/images/team_instagram.svg" alt=""></a>
-											<a href="#"><img src="assets/images/team_X.svg" alt=""></a>
-										</div>
-									</div>
-								</div>
-							</li>
-							<li class="modal_card" data-index="1" onclick="openModal(1)">
-								<div>
-									<div class="img"><img src="assets/images/team_member_image_2.png" alt="img"
-											draggable="false"></div>
-									<div class="mt-11">
-										<div
-											class="w-full h-[55px] lg:h-[74px] team_name_bg flex items-center justify-center">
-											<h1 class="text-white text-lg lg:text-[24px] font-bold">Usman Zia</h1>
-										</div>
-										<p class="text-[24px] text-center mt-3">Senior Developer</p>
-										<div class="w-[162px] flex items-center justify-between gap-5 mx-auto mt-3">
-											<a href="#"><img src="assets/images/team_facebook.svg" alt=""></a>
-											<a href="#"><img src="assets/images/team_instagram.svg" alt=""></a>
-											<a href="#"><img src="assets/images/team_X.svg" alt=""></a>
-										</div>
-									</div>
-								</div>
-							</li>
-							<li class="modal_card" data-index="2" onclick="openModal(2)">
-								<div>
-									<div class="img"><img src="assets/images/team_member_image_1.png" alt="img"
-											draggable="false"></div>
-									<div class="mt-11">
-										<div
-											class="w-full h-[55px] lg:h-[74px] team_name_bg flex items-center justify-center">
-											<h1 class="text-white text-lg lg:text-[24px] font-bold">Usman Zia</h1>
-										</div>
-										<p class="text-[24px] text-center mt-3">Senior Developer</p>
-										<div class="w-[162px] flex items-center justify-between gap-5 mx-auto mt-3">
-											<a href="#"><img src="assets/images/team_facebook.svg" alt=""></a>
-											<a href="#"><img src="assets/images/team_instagram.svg" alt=""></a>
-											<a href="#"><img src="assets/images/team_X.svg" alt=""></a>
-										</div>
-									</div>
-								</div>
-							</li>
-							<li class="modal_card" data-index="3" onclick="openModal(3)">
-								<div>
-									<div class="img"><img src="assets/images/team_member_image_2.png" alt="img"
-											draggable="false"></div>
-									<div class="mt-11">
-										<div
-											class="w-full h-[55px] lg:h-[74px] team_name_bg flex items-center justify-center">
-											<h1 class="text-white text-lg lg:text-[24px] font-bold">Usman Zia</h1>
-										</div>
-										<p class="text-[24px] text-center mt-3">Senior Developer</p>
-										<div class="w-[162px] flex items-center justify-between gap-5 mx-auto mt-3">
-											<a href="#"><img src="assets/images/team_facebook.svg" alt=""></a>
-											<a href="#"><img src="assets/images/team_instagram.svg" alt=""></a>
-											<a href="#"><img src="assets/images/team_X.svg" alt=""></a>
-										</div>
-									</div>
-								</div>
-							</li>
-						</ul>
-						<i id="modal_right" class=""><img src="assets/images/right_slide.svg" alt=""></i>
+				<div class="modal-content p-5 ">
+					<div class="float-right">
+						<span
+							class="bg-gray-300 text-black w-6 h-6 rounded-full flex items-center justify-center cursor-pointer"
+							onclick="closeModal()">✖</span>
 					</div>
-				</div>
-			</div>
-
-			<!-- Slider -->
-			<!-- <div class="relative flex justify-start w-fit mt-[74px] team_carousel_container">
-				<div class="absolute top-[50%] bottom-[50%]">
-					<div class="swiper-button-prev"></div>
-				</div>
-				<div class="swiper ml-10 overflow-hidden" id="mainCarousel">
-					<div class="swiper-wrapper">
-
-						<div class="swiper-slide w-[345px] lg:w-[463px] flex flex-col items-center" data-index="0">
-							<div class="w-[345px] lg:w-[463px] h-[399px] lg:h-[534px]">
-								<img class="h-full w-full" src="assets/images/team_member_image_1.png" alt="">
-							</div>
-							<div class="mt-11">
-								<div
-									class="w-[302px] lg:w-[404px] h-[55px] lg:h-[74px] team_name_bg flex items-center justify-center">
-									<h1 class="text-white text-lg lg:text-[24px] font-bold">Usman Zia</h1>
+					<div class="swiper mySwiper">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide" data-index="0">
+								<div>
+									<div onclick="openModal(0)" class="img"><img
+											src="assets/images/team_member_image_1.png" alt="img" draggable="false">
+									</div>
+									<div class="mt-11">
+										<div
+											class="w-full h-[55px] lg:h-[74px] team_name_bg flex items-center justify-center">
+											<h1 class="text-white text-lg lg:text-[24px] font-bold">Usman Zia</h1>
+										</div>
+										<p class="text-[24px] text-center mt-3">Senior Developer</p>
+										<div class="w-[162px] flex items-center justify-between gap-5 mx-auto mt-3">
+											<a onclick="scrollToTop()" href="#"><img
+													src="assets/images/team_facebook.svg" alt=""></a>
+											<a onclick="scrollToTop()" href="#"><img
+													src="assets/images/team_instagram.svg" alt=""></a>
+											<a onclick="scrollToTop()" href="#"><img src="assets/images/team_X.svg"
+													alt=""></a>
+										</div>
+									</div>
 								</div>
-								<p class="text-[24px] text-center mt-3">Senior Developer</p>
-								<div class="w-[162px] flex items-center justify-between gap-5 mx-auto mt-3">
-									<a href="#"><img src="assets/images/team_facebook.svg" alt=""></a>
-									<a href="#"><img src="assets/images/team_instagram.svg" alt=""></a>
-									<a href="#"><img src="assets/images/team_X.svg" alt=""></a>
+							</div>
+							<div class="swiper-slide" data-index="1">
+								<div>
+									<div onclick="openModal(1)" class="img"><img
+											src="assets/images/team_member_image_2.png" alt="img" draggable="false">
+									</div>
+									<div class="mt-11">
+										<div
+											class="w-full h-[55px] lg:h-[74px] team_name_bg flex items-center justify-center">
+											<h1 class="text-white text-lg lg:text-[24px] font-bold">Usman Zia</h1>
+										</div>
+										<p class="text-[24px] text-center mt-3">Senior Developer</p>
+										<div class="w-[162px] flex items-center justify-between gap-5 mx-auto mt-3">
+											<a onclick="scrollToTop()" href="#"><img
+													src="assets/images/team_facebook.svg" alt=""></a>
+											<a onclick="scrollToTop()" href="#"><img
+													src="assets/images/team_instagram.svg" alt=""></a>
+											<a onclick="scrollToTop()" href="#"><img src="assets/images/team_X.svg"
+													alt=""></a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-slide" data-index="2">
+								<div>
+									<div onclick="openModal(2)" class="img"><img
+											src="assets/images/team_member_image_1.png" alt="img" draggable="false">
+									</div>
+									<div class="mt-11">
+										<div
+											class="w-full h-[55px] lg:h-[74px] team_name_bg flex items-center justify-center">
+											<h1 class="text-white text-lg lg:text-[24px] font-bold">Usman Zia</h1>
+										</div>
+										<p class="text-[24px] text-center mt-3">Senior Developer</p>
+										<div class="w-[162px] flex items-center justify-between gap-5 mx-auto mt-3">
+											<a onclick="scrollToTop()" href="#"><img
+													src="assets/images/team_facebook.svg" alt=""></a>
+											<a onclick="scrollToTop()" href="#"><img
+													src="assets/images/team_instagram.svg" alt=""></a>
+											<a onclick="scrollToTop()" href="#"><img src="assets/images/team_X.svg"
+													alt=""></a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-slide" data-index="3">
+								<div>
+									<div onclick="openModal(3)" class="img"><img
+											src="assets/images/team_member_image_1.png" alt="img" draggable="false">
+									</div>
+									<div class="mt-11">
+										<div
+											class="w-full h-[55px] lg:h-[74px] team_name_bg flex items-center justify-center">
+											<h1 class="text-white text-lg lg:text-[24px] font-bold">Usman Zia</h1>
+										</div>
+										<p class="text-[24px] text-center mt-3">Senior Developer</p>
+										<div class="w-[162px] flex items-center justify-between gap-5 mx-auto mt-3">
+											<a onclick="scrollToTop()" href="#"><img
+													src="assets/images/team_facebook.svg" alt=""></a>
+											<a onclick="scrollToTop()" href="#"><img
+													src="assets/images/team_instagram.svg" alt=""></a>
+											<a onclick="scrollToTop()" href="#"><img src="assets/images/team_X.svg"
+													alt=""></a>
+										</div>
+									</div>
 								</div>
 							</div>
 						</div>
+						<div class="swiper-button-next"></div>
+						<div class="swiper-button-prev"></div>
+						<div class="swiper-pagination"></div>
 					</div>
 				</div>
-				<div class="absolute top-[50%] bottom-[50%] -right-10">
-					<div class="swiper-button-next"></div>
-				</div>
-			</div> -->
+			</div>
 		</div>
 
-		<!-- Modal -->
+		<!-- End Updated carousel and modal -->
 
 
 		<!-- Work Section-->
 		<div class="px-10 2xl:px-[170px] mt-[78px] md:mt-[206px]" id="portfolio">
 			<div class="w-fit md:mx-auto">
-				<h1 class="font-extrabold text-[32px] md:text-[45px] lg:text-[64px] mb-3 md:mb-6">Our Amazing Work</h1>
+				<h1 class="font-extrabold text-[32px] md:text-[45px] lg:text-[64px] mb-3 md:mb-6">Our Amazing
+					Work</h1>
 				<div class="mb-6 w-fit">
 					<ul class="flex flex-wrap text-sm font-medium text-center" id="myTab" role="tablist">
 						<li class="mr-2">
@@ -603,10 +630,12 @@
 		<!-- Blog section -->
 		<div class="px-10 2xl:px-[170px] mt-[52px] md:mt-[206px] hidden">
 			<div>
-				<h1 class="font-extrabold text-[32px] md:text-[45px] lg:text-[64px] mb-6 max-w-[964px]">Latest Blogs &
+				<h1 class="font-extrabold text-[32px] md:text-[45px] lg:text-[64px] mb-6 max-w-[964px]">Latest
+					Blogs &
 					News
 				</h1>
-				<p class="max-w-[912px] text-lg lg:text-[24px]">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+				<p class="max-w-[912px] text-lg lg:text-[24px]">Lorem ipsum dolor sit amet, consectetur
+					adipiscing elit,
 					sed
 					do eiusmod tempor incididunt ut aliqua</p>
 			</div>
@@ -615,8 +644,10 @@
 					<img class="w-full h-[200px] 2xl:h-[325px]" src="assets/images/blog_image_1.png" alt="">
 					<div class="px-6 2xl:px-12 py-4 2xl:py-8 text-[#111227]">
 						<p class="text-[#FCB623] 2xl:text-lg font-extrabold">May 15, 2024</p>
-						<h1 class="mt-4 2xl:mt-6 font-semibold text-[24px] 2xl:text-[32px]">Future of Websites</h1>
-						<p class="mt-4 2xl:mt-6 text-base 2xl:text-[20px]">Lorem ipsum dolor sit amet, consectetur
+						<h1 class="mt-4 2xl:mt-6 font-semibold text-[24px] 2xl:text-[32px]">Future of Websites
+						</h1>
+						<p class="mt-4 2xl:mt-6 text-base 2xl:text-[20px]">Lorem ipsum dolor sit amet,
+							consectetur
 							adipiscing elit, sed do eiusmod tempor incididunt ut aliqua</p>
 						<div class="mt-4 2xl:mt-6 flex items-center gap-[21px]">
 							<div class="2xl:w-[72px] w-[50px] h-[50px] 2xl:h-[72px] rounded-full">
@@ -630,8 +661,10 @@
 					<img class="w-full h-[200px] 2xl:h-[325px]" src="assets/images/blog_image_1.png" alt="">
 					<div class="px-6 2xl:px-12 py-4 2xl:py-8 text-[#111227]">
 						<p class="text-[#FCB623] 2xl:text-lg font-extrabold">May 15, 2024</p>
-						<h1 class="mt-4 2xl:mt-6 font-semibold text-[24px] 2xl:text-[32px]">Future of Websites</h1>
-						<p class="mt-4 2xl:mt-6 text-base 2xl:text-[20px]">Lorem ipsum dolor sit amet, consectetur
+						<h1 class="mt-4 2xl:mt-6 font-semibold text-[24px] 2xl:text-[32px]">Future of Websites
+						</h1>
+						<p class="mt-4 2xl:mt-6 text-base 2xl:text-[20px]">Lorem ipsum dolor sit amet,
+							consectetur
 							adipiscing elit, sed do eiusmod tempor incididunt ut aliqua</p>
 						<div class="mt-4 2xl:mt-6 flex items-center gap-[21px]">
 							<div class="2xl:w-[72px] w-[50px] h-[50px] 2xl:h-[72px] rounded-full">
@@ -645,8 +678,10 @@
 					<img class="w-full h-[200px] 2xl:h-[325px]" src="assets/images/blog_image_1.png" alt="">
 					<div class="px-6 2xl:px-12 py-4 2xl:py-8 text-[#111227]">
 						<p class="text-[#FCB623] 2xl:text-lg font-extrabold">May 15, 2024</p>
-						<h1 class="mt-4 2xl:mt-6 font-semibold text-[24px] 2xl:text-[32px]">Future of Websites</h1>
-						<p class="mt-4 2xl:mt-6 text-base 2xl:text-[20px]">Lorem ipsum dolor sit amet, consectetur
+						<h1 class="mt-4 2xl:mt-6 font-semibold text-[24px] 2xl:text-[32px]">Future of Websites
+						</h1>
+						<p class="mt-4 2xl:mt-6 text-base 2xl:text-[20px]">Lorem ipsum dolor sit amet,
+							consectetur
 							adipiscing elit, sed do eiusmod tempor incididunt ut aliqua</p>
 						<div class="mt-4 2xl:mt-6 flex items-center gap-[21px]">
 							<div class="2xl:w-[72px] w-[50px] h-[50px] 2xl:h-[72px] rounded-full">
@@ -668,7 +703,8 @@
 		<!-- Get In Touch -->
 		<div id="contact" class="mt-[106px] px-10 2xl:px-[170px]">
 			<div>
-				<h1 class="font-extrabold text-[32px] md:text-[45px] lg:text-[64px] max-w-[964px]">Interested?</h1>
+				<h1 class="font-extrabold text-[32px] md:text-[45px] lg:text-[64px] max-w-[964px]">Interested?
+				</h1>
 				<h1 class="font-extrabold text-[32px] md:text-[45px] lg:text-[64px] mb-9 max-w-[964px]">
 					Let's Get In Touch
 				</h1>
@@ -742,6 +778,56 @@
 
 
 	<script>
+		// NEW ADD
+		var swiper = new Swiper(".mySwiper", {
+			cssMode: true,
+			navigation: {
+				nextEl: ".swiper-button-next",
+				prevEl: ".swiper-button-prev",
+			},
+			mousewheel: true,
+			keyboard: true,
+		});
+
+
+		function changeLanguage(id) {
+			const CZE = document.getElementById('CZE');
+			const ENG = document.getElementById('ENG');
+			const mobile_CZE = document.getElementById('mobile_CZE');
+			const mobile_ENG = document.getElementById('mobile_ENG');
+			if (id == 'CZE') {
+				CZE.classList.remove('flex');
+				CZE.classList.add('hidden');
+				ENG.classList.remove('hidden');
+				ENG.classList.add('flex');
+				mobile_CZE.classList.remove('flex');
+				mobile_CZE.classList.add('hidden');
+				mobile_ENG.classList.remove('hidden');
+				mobile_ENG.classList.add('flex');
+			}
+			else {
+				ENG.classList.remove('flex');
+				ENG.classList.add('hidden');
+				CZE.classList.remove('hidden');
+				CZE.classList.add('flex');
+				mobile_ENG.classList.remove('flex');
+				mobile_ENG.classList.add('hidden');
+				mobile_CZE.classList.remove('hidden');
+				mobile_CZE.classList.add('flex');
+			}
+
+		}
+
+
+		function scrollToTop() {
+			window.scrollTo({
+				top: 0,
+				behavior: 'smooth'
+			});
+		}
+
+		// END NEW ADD
+
 		document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 			anchor.addEventListener('click', function (e) {
 				e.preventDefault();
@@ -751,6 +837,7 @@
 				});
 			});
 		});
+
 		function validateEmail() {
 			const emailInput = document.getElementById('email');
 			const submitButton = document.getElementById('submitButton');
